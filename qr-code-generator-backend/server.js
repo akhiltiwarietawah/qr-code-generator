@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import qr from 'qr-image';
 import { fileURLToPath } from 'url';
+import path from 'path';
 
 // Get the directory name
 const __filename = fileURLToPath(import.meta.url);
