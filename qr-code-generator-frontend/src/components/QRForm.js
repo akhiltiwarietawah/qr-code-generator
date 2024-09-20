@@ -12,7 +12,7 @@ const QRForm = ({ onQRGenerated }) => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('https://qr-code-creator-63cx.onrender.com/api/qrcode', { text: url }, { responseType: 'blob' });
+      const response = await axios.post('https://qr-code-creator-63cx.onrender.com/generate-qr', { text: url }, { responseType: 'blob' });
       const imageUrl = URL.createObjectURL(response.data);
       onQRGenerated(imageUrl);
     } catch (err) {
