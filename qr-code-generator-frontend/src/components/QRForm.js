@@ -11,6 +11,7 @@ const QRForm = ({ onQRGenerated }) => {
     e.preventDefault();
     setLoading(true);
     setError('');
+    console.log('Submitting URL:', url); // Add this line
     try {
       const response = await axios.post('https://qr-code-creator-63cx.onrender.com/generate-qr', { text: url }, { responseType: 'blob' });
       const imageUrl = URL.createObjectURL(response.data);
